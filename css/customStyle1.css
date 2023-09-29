@@ -192,9 +192,9 @@ button.btn.btn-light.border-2.border-secondary.dropdown-toggle {
   }
 
   button.nav-link {
-    min-width: 131px;
-    padding: 7px 0px;
-    margin-bottom: 10px !important;
+    min-width: max-content;
+    padding: 7px 15px;
+    /* margin-bottom: 5px !important; */
   }
   .nav-item {
     padding-right: 0px !important;
@@ -434,4 +434,20 @@ label.form-check-label {
 
 .orderHistory-title{
   width: max-content;
+}
+
+/* for hover delete button */
+.btn > svg {
+  transition: fill ease 0.3s;
+}
+.btn:hover > svg {
+  fill: #fff;
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0rem !important;
 }
