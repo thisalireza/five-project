@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="./css/customStyle1.css" />
   </head>
 
-  <body class="my_body">
+  <body>
+    <div class="virtual-body ">
+      
     <!-- tabs -->
-    <section id="tabs" class="mx-auto my-5">
+    <section id="tabs" class="mx-auto py-5">
       <div class="container custom-container">
         <div class="row">
           <ul class="nav nav-tabs bg-white rounded" id="myTab" role="tablist">
@@ -110,241 +112,295 @@
               role="tabpanel"
               aria-labelledby="home-tab"
             >
+                <!--End tabs -->
+                
               <!-- content start-->
 
               <div class="container-fliud">
                 <div class="row">
                   <div class="col-12 py-4 px-sm-1 px-md-4">
                     <!-- information user-->
-                    <div class="detail-dis2 rounded p-sm-1 p-md-4">
+                    <div class="detail-dis2 rounded p-sm-0 p-md-4">
                       <div class="row mycontent">
                         <div class="d-flex justify-content-between mb-3">
                           <div class="user-information">
-                            <span>اطلاعات تحویل گیرنده خود را انتخاب نمائید :</span>
-                           </div>
+                            <span
+                              >اطلاعات تحویل گیرنده خود را انتخاب نمائید :</span
+                            >
+                          </div>
                           <div class="getback d-flex align-items-center gap-1">
-                            <a href="#">
-                            <span>بازگشت</span>
-                           <img src="./img/left-arrow-svgrepo-com.svg" alt="left arrow svg" class="mysvg">
-                        </a>
+                            <a href="#"> <span>بازگشت</span></a>
+                            <a href="">
+                              <img
+                                src="./img/left-arrow-svgrepo-com.svg"
+                                alt="left arrow svg"
+                                class="mysvg"
+                            /></a>
                           </div>
                         </div>
 
-                    <!-- select delivery-->
-                    <div class="row p-sm-3 p-md-0 ">
-                       <!--  delivery one-->
-                        <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
-                            <div class="AddressDivision d-sm-block d-md-flex justify-content-between align-items-center h-100">
-                                <div class="AddressContent rounded-3 px-3 pt-2 my-3 w-100 h-100">
-        
-                                    <div class="form-check-select-delivery p-2 rounded-3">
-                                        <label
-                                        for="flexRadioDefault1"
-                                        class="typeofpayment d-flex align-items-center justify-content-between rounded py-2 px-4"
-                                        id="mydiv1"
-                                      >
-                                        <div class="d-flex align-items-center">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="flexRadioDefault"
-                                            id="flexRadioDefault1"
-                                            onchange="myFunction('mydiv1')"
-                                          />
-                                        </div>
-              
-                                        <div
-                                          class="d-flex align-items-center justify-content-start"
-                                        >
-                                          <label
-                                            class="form-check-label"
-                                            for="flexRadioDefault1"
-                                          >
-                                           انتخاب تحویل گیرنده
-                                          </label>
-                                        </div>
+                        <!-- select delivery-->
+                        <div class="row p-0 mx-auto">
+                          <!--  delivery one-->
+                          <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
 
-                                      </label>
-                                      </div >
-                                      <div class="py-3">
-                                        <strong>0430147953</strong>
+                            <div
+                              class=" d-sm-block d-md-flex justify-content-between align-items-center h-100"
+                            >
 
-                                        <div class="py-3">
-                                            <span>کد ملی فراگیر:  </span>
-                                          <span>0430147953</span>
+                              <div
+                                class="AddressContent rounded-3  my-3 w-100 h-100"
+                              >
+                              <label
+                              for="flexRadioDefault1"
+                              class="typeofpayment w-100 h-100  border-0 px-3 pt-3"
+                              id="mydiv1"
+                            >
+                                <div
+                                  class="form-check-select-delivery py-2 rounded-3 d-flex justify-content-start align-item-center gap-2"
+                                >
 
-                                        </div>
+                                    <div class="d-flex align-items-center">
+                                      <input
+                                        class="form-check-input m-0 p-0 "
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault1"
+                                        onchange="myFunction('mydiv1')"
+                                      />
 
-                                        <div class="d-flex justify-content-end ">
-                                            <button class="btn btn-primary de-btn " type="button">
-                                                حذف
-                                            </button>
-                                            <button class="btn btn-primary de-btn" type="button">
-                                                ویرایش
-                                            </button>
-                                        </div>
-                                       
-                                      </div>
-        
-        
-                                </div>
-        
-                            </div> 
-                        </div>
-                       <!--  delivery two-->
-                        <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
-                            <div class="AddressDivision d-sm-block d-md-flex justify-content-between align-items-center h-100">
-                                <div class="AddressContent rounded-3 px-3 pt-2  my-3 w-100 h-100">
-        
-                                    <div class="form-check-select-delivery p-2 rounded-3">
-                                      <label
-                                      for="flexRadioDefault2"
-                                      class="typeofpayment d-flex align-items-center justify-content-between rounded py-2 px-4"
-                                      id="mydiv2"
+                                    </div>
+
+                                    <div
+                                      class="d-flex align-items-center justify-content-start"
                                     >
-                                      <div class="d-flex align-items-center">
-                                        <input
-                                          class="form-check-input"
-                                          type="radio"
-                                          name="flexRadioDefault"
-                                          id="flexRadioDefault2"
-                                          onchange="myFunction('mydiv2')"
-                                        />
-                                      </div>
-            
-                                      <div
-                                        class="d-flex align-items-center justify-content-start"
+                                      <label
+                                        class="form-check-label"
+                                        for="flexRadioDefault1"
                                       >
-                                        <label
-                                          class="form-check-label"
-                                          for="flexRadioDefault1"
-                                        >
-                                         انتخاب تحویل گیرنده
-                                        </label>
-                                      </div>
-
-                                    </label>
-                                      </div >
-                                      <div class="py-3">
-                                        <strong>0430147953</strong>
-
-                                        <div class="py-3">
-                                            <span>کد ملی فراگیر:  </span>
-                                          <span>0430147953</span>
-
-                                        </div>
-
-                                        <div class="d-flex justify-content-end ">
-                                            <button class="btn btn-primary de-btn " type="button">
-                                                حذف
-                                            </button>
-                                            <button class="btn btn-primary de-btn" type="button">
-                                                ویرایش
-                                            </button>
-                                        </div>
-                                       
-                                      </div>
-        
-        
+                                        انتخاب تحویل گیرنده
+                                      </label>
+                                    </div>
+                                  
                                 </div>
-        
-                            </div> 
+                                <div class="py-3">
+                                  <strong>0430147953</strong>
+
+                                  <div class="py-3">
+                                    <span>کد ملی فراگیر: </span>
+                                    <span>0430147953</span>
+                                  </div>
+
+                                  <div class="pt-1 pb-4">
+                                    <span>شماره کارت حکمت: </span>
+                                    <span>012345678910</span>
+                                  </div>
+
+                                  <div
+                                    class="de-section d-flex justify-content-end "
+                                  >
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      حذف
+                                    </button>
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      ویرایش
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </label>
+                            </div>
+                          </div>
+                          <!--  delivery two-->
+                          <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
+
+                            <div
+                              class=" d-sm-block d-md-flex justify-content-between align-items-center h-100"
+                            >
+
+                              <div
+                                class="AddressContent rounded-3  my-3 w-100 h-100"
+                              >
+                              <label
+                              for="flexRadioDefault2"
+                              class="typeofpayment w-100 h-100  border-0 px-3 pt-3"
+                              id="mydiv2"
+                            >
+                                <div
+                                  class="form-check-select-delivery py-2 rounded-3 d-flex justify-content-start align-item-center gap-2"
+                                >
+
+                                    <div class="d-flex align-items-center">
+                                      <input
+                                        class="form-check-input m-0 p-0"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault2"
+                                        onchange="myFunction('mydiv2')"
+                                      />
+                                    </div>
+
+                                    <div
+                                      class="d-flex align-items-center justify-content-start"
+                                    >
+                                      <label
+                                        class="form-check-label"
+                                        for="flexRadioDefault1"
+                                      >
+                                        انتخاب تحویل گیرنده
+                                      </label>
+                                    </div>
+                                  
+                                </div>
+                                <div class="py-3">
+                                  <strong>0430147953</strong>
+
+                                  <div class="py-3">
+                                    <span>کد ملی فراگیر: </span>
+                                    <span>0430147953</span>
+                                  </div>
+
+                                  <div class="pt-1 pb-4">
+                                    <span>شماره کارت حکمت: </span>
+                                    <span>012345678910</span>
+                                  </div>
+
+                                  <div
+                                    class="de-section d-flex justify-content-end "
+                                  >
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      حذف
+                                    </button>
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      ویرایش
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </label>
+                            </div>
+                          </div>
+
+                          <!--  delivery tree-->
+
+                          <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
+
+                            <div
+                              class=" d-sm-block d-md-flex justify-content-between align-items-center h-100"
+                            >
+
+                              <div
+                                class="AddressContent rounded-3  my-3 w-100 h-100"
+                              >
+                              <label
+                              for="flexRadioDefault3"
+                              class="typeofpayment w-100 h-100  border-0 px-3 pt-3"
+                              id="mydiv3"
+                            >
+                                <div
+                                  class="form-check-select-delivery py-2 rounded-3 d-flex justify-content-start align-item-center gap-2"
+                                >
+
+                                    <div class="d-flex align-items-center">
+                                      <input
+                                        class="form-check-input m-0 p-0"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault3"
+                                        onchange="myFunction('mydiv3')"
+                                      />
+                                    </div>
+
+                                    <div
+                                      class="d-flex align-items-center justify-content-start"
+                                    >
+                                      <label
+                                        class="form-check-label"
+                                        for="flexRadioDefault1"
+                                      >
+                                        انتخاب تحویل گیرنده
+                                      </label>
+                                    </div>
+                                  
+                                </div>
+                                <div class="py-3">
+                                  <strong>0430147953</strong>
+
+                                  <div class="py-3">
+                                    <span>کد ملی فراگیر: </span>
+                                    <span>0430147953</span>
+                                  </div>
+
+                                  <div class="pt-1 pb-4">
+                                    <span>شماره کارت حکمت: </span>
+                                    <span>012345678910</span>
+                                  </div>
+
+                                  <div
+                                    class="de-section d-flex justify-content-end "
+                                  >
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      حذف
+                                    </button>
+                                    <button
+                                      class="btn btn-primary de-btn"
+                                      type="button"
+                                    >
+                                      ویرایش
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </label>
+                            </div>
+                          </div>
+
+                          <!-- add delivery -->
+
+                          <div
+                            class="col-12 col-md-12 col-lg-6 col-xl-3 my-4 my-md-2"
+                          >
+                            <div
+                              class=" d-sm-block d-md-flex justify-content-between align-items-center h-100"
+                            >
+                              <div
+                                class="AddressContent2 rounded-3 px-3 pt-sm-0 pt-md-2 my-1 w-100 h-100 d-flex justify-content-center align-item-center"
+                              >
+                                <div
+                                  class="d-flex justify-content-center flex-column-reverse align-items-center"
+                                >
+                                  <div class="d-flex justify-content-center">
+                                    <span class="add-delivery"
+                                      >افزودن تحویل گیرنده</span
+                                    >
+                                  </div>
+                                  <div class="d-flex justify-content-center">
+                                    <img
+                                      src="./img/plus-large-svgrepo-com.svg"
+                                      alt="plus"
+                                      class="mysvg"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-
-                                               <!--  delivery tree-->
-                                               <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-2">
-                                                <div class="AddressDivision d-sm-block d-md-flex justify-content-between align-items-center h-100 ">
-                                                    <div class="AddressContent rounded-3 px-3 pt-2 my-3 w-100 h-100">
-                            
-                                                        <div class="form-check-select-delivery p-2 rounded-3">
-                                                          <label
-                                                          for="flexRadioDefault3"
-                                                          class="typeofpayment d-flex align-items-center justify-content-between rounded py-2 px-4"
-                                                          id="mydiv3"
-                                                        >
-                                                          <div class="d-flex align-items-center">
-                                                            <input
-                                                              class="form-check-input"
-                                                              type="radio"
-                                                              name="flexRadioDefault"
-                                                              id="flexRadioDefault3"
-                                                              onchange="myFunction('mydiv3')"
-                                                            />
-                                                          </div>
-                                
-                                                          <div
-                                                            class="d-flex align-items-center justify-content-start"
-                                                          >
-                                                            <label
-                                                              class="form-check-label"
-                                                              for="flexRadioDefault1"
-                                                            >
-                                                             انتخاب تحویل گیرنده
-                                                            </label>
-                                                          </div>
-                  
-                                                        </label>
-                                                          </div >
-                                                          <div class="py-3">
-                                                            <strong>0430147953</strong>
-                    
-                                                            <div class="py-3">
-                                                                <span>کد ملی فراگیر:  </span>
-                                                              <span>0430147953</span>
-                    
-                                                            </div>
-                    
-                                                            <div class="d-flex justify-content-end ">
-                                                                <button class="btn btn-primary de-btn " type="button">
-                                                                    حذف
-                                                                </button>
-                                                                <button class="btn btn-primary de-btn" type="button">
-                                                                    ویرایش
-                                                                </button>
-                                                            </div>
-                                                           
-                                                          </div>
-                            
-                            
-                                                    </div>
-                            
-                                                </div> 
-                                            </div>
-
-                                                <!-- add delivery -->
-                
-                                               <div class="col-12 col-md-12 col-lg-6 col-xl-3 my-4 my-md-2">
-                                                <div class="AddressDivision d-sm-block d-md-flex justify-content-between align-items-center h-100">
-                                                    <div class="AddressContent2 rounded-3 px-3 pt-2 my-1 w-100 h-100 d-flex justify-content-center align-item-center">
-                                                        
-                                                        <div class="d-flex justify-content-center flex-column-reverse align-items-center">
-
-        
-                                                                <div class="d-flex justify-content-center">
-                                                                <span class="add-delivery">افزودن تحویل گیرنده</span>
-    
-                                                                </div>
-                                                                <div class="d-flex justify-content-center ">
-                                                                    <img src="./img/plus-large-svgrepo-com.svg" alt="plus" class="mysvg">
-        
-                                                                    </div>
-
-                                                        </div>
-                                                        
-
-
-                                                    </div>
-                            
-                                                </div> 
-                                            </div>
-
-
-                    </div>
-
-
-
-
-
                       </div>
                     </div>
                   </div>
@@ -355,7 +411,7 @@
         </div>
       </div>
     </section>
-
+  </div>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
   </body>

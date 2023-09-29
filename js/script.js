@@ -5,6 +5,7 @@ function myFunction(id) {
     itm.style.backgroundColor = "#fff";
   });
   element.style.backgroundColor = "#e9e9f5";
+  element.style.transition ="0.6s"
 }
 
 // products with sidebar project
