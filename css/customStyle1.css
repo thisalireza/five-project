@@ -128,6 +128,51 @@ span {
   .View-order-text{
     font-size: smaller;
   }
+
+  .detail-dis-product{
+    border: 0 !important;
+    border-bottom: 1px solid gainsboro !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    float: none !important;
+    text-align: center !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  margin-top: 1rem;
+    float: none !important;
+    text-align: center !important;
+}
+
+
+
+.dataTables_wrapper .dataTables_filter input{
+  width: 100% !important;
+}
+
+div#myTable_wrapper {
+
+  padding: 1rem !important;
+  
+}
+
+.dataTables_wrapper .dataTables_filter input
+{
+  margin: 0 !important;
+}
+
+div#myTable_info {
+  padding-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+div#myTable_paginate {
+  width: 100%;
+  text-align: center;
+}
+
 }
 
 /* style for products */
@@ -189,6 +234,7 @@ button.btn.btn-light.border-2.border-secondary.dropdown-toggle {
     overflow-x: scroll;
     align-items: center;
     overflow-y: hidden;
+    padding-bottom: 12px;
   }
 
   button.nav-link {
@@ -213,11 +259,12 @@ button.btn.btn-light.border-2.border-secondary.dropdown-toggle {
     border-radius: 0 !important;
   }
 
-  .detail-dis2,
-  .detail-dis-product {
+  .detail-dis2 {
     border: 0 !important;
     border-bottom: 0 !important;
   }
+
+
 
   .sidebar-desktop {
     position: fixed !important;
@@ -450,4 +497,67 @@ label.form-check-label {
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0rem !important;
+}
+
+
+@media only screen and (min-device-width: 425px) and (max-device-width: 768px){
+  .product-image-ordering{
+    max-width: 75% !important;
+  }
+}
+
+@media (max-width:425px){
+  .badge {
+    width: 100%;
+}
+}
+
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: white !important;
+  border: 1px solid #0d6efd !important;
+  background: #0d6efd !important;
+  border-radius: 5px;
+}
+
+
+div#myTable_wrapper {
+  background: whitesmoke;
+  padding: 2rem;
+  border-radius: 8px !important;
+}
+
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-right: 0.5em;
+  border: 0;
+  padding: 5px;
+  width: 20rem;
+  border-radius: 6px;
+}
+
+
+.dataTables_wrapper .dataTables_filter input:focus-visible {
+  outline: none !important;
+}
+
+table.dataTable.no-footer {
+  padding-bottom: 1rem;
+  border-bottom: none !important;
+}
+
+
+.svg-in-Representative-list{
+  transform: scaleX(-1) !important;
+}
+
+
+
+select {
+  word-wrap: normal;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }

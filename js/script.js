@@ -1,3 +1,11 @@
+//style for table with search - jQuery code
+$(document).ready(function(){
+  $('#myTable').dataTable();
+});
+
+
+
+
 function myFunction(id) {
   var element = document.getElementById(id);
   let allTypeofpayments = document.querySelectorAll(".typeofpayment");
@@ -82,3 +90,9 @@ function deleteFilter(target) {
 }
 
 // document.querySelector('.selectpicker').selectpicker();
+
+
+
+
+
+
