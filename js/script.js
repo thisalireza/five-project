@@ -1,10 +1,26 @@
-//style for table with search - jQuery code
-$(document).ready(function(){
-  $('#myTable').dataTable();
+new DataTable("#myTable", {
+  responsive: true,
+  language: {
+    decimal: "",
+    emptyTable: "داده ای مطابق با عبارت جستجو شده یافت نشد",
+    info: "صفحه _START_ از _END_ از _TOTAL_ داده",
+    infoEmpty: "نمایش 0 تا 0 از 0 کل رکورد",
+    infoFiltered: "(فیلتر شده از _MAX_ تعداد رکورد)",
+    infoPostFix: "",
+    thousands: ",",
+    lengthMenu: "نمایش _MENU_ داده",
+    loadingRecords: "بارگزاری...",
+    processing: "",
+    search: "جستوجو: ",
+    zeroRecords: "داده ای مطابق با عبارت جستجو شده یافت نشد",
+    paginate: {
+      first: "اول",
+      last: "آخر",
+      next: "بعدی",
+      previous: "قبلی",
+    },
+  },
 });
-
-
-
 
 function myFunction(id) {
   var element = document.getElementById(id);
@@ -13,7 +29,7 @@ function myFunction(id) {
     itm.style.backgroundColor = "#fff";
   });
   element.style.backgroundColor = "#e9e9f5";
-  element.style.transition ="0.6s"
+  element.style.transition = "0.6s";
 }
 
 // products with sidebar project
@@ -72,8 +88,8 @@ function closeNav() {
 
 // 3dot
 // let matn = document.querySelector("body > div:nth-child(3) > div > div.col-12.col-md-3.sidebar-desktop > div > div:nth-child(8) > p");
-let matn = document.querySelector(".text-sidebar3");
-matn.innerText = matn.innerText.substring(0, 20) + "...";
+// let matn = document.querySelector(".text-sidebar3");
+// matn.innerText = matn.innerText.substring(0, 20) + "...";
 
 // for list
 $(function () {
@@ -90,9 +106,3 @@ function deleteFilter(target) {
 }
 
 // document.querySelector('.selectpicker').selectpicker();
-
-
-
-
-
-
