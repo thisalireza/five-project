@@ -3,15 +3,15 @@ new DataTable("#myTable", {
   language: {
     decimal: "",
     emptyTable: "داده ای مطابق با عبارت جستجو شده یافت نشد",
-    info: "صفحه _START_ از _END_ از _TOTAL_ داده",
+    info: "نمایش _START_ تا _END_ از _TOTAL_ کل ورودی ها",
     infoEmpty: "نمایش 0 تا 0 از 0 کل رکورد",
     infoFiltered: "(فیلتر شده از _MAX_ تعداد رکورد)",
     infoPostFix: "",
     thousands: ",",
-    lengthMenu: "نمایش _MENU_ داده",
+    lengthMenu: "نمایش _MENU_ تا از کل ورودی ها",
     loadingRecords: "بارگزاری...",
     processing: "",
-    search: "جستوجو: ",
+    search: "جستجو: ",
     zeroRecords: "داده ای مطابق با عبارت جستجو شده یافت نشد",
     paginate: {
       first: "اول",
@@ -100,9 +100,5 @@ $(function () {
   });
 });
 
-//for deleting filters
-function deleteFilter(target) {
-  target.parentElement.remove();
-}
 
-// document.querySelector('.selectpicker').selectpicker();
+
