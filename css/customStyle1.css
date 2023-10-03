@@ -470,6 +470,15 @@ label.form-check-label {
 
 }
 
+@media (max-width: 525px) {
+  #myTable_previous{
+    display: none;
+  }
+  #myTable_next{
+    display: none;
+  }
+}
+
 .svg-in-Representative-list {
   transform: scaleX(-1) !important;
 }
@@ -582,11 +591,14 @@ table.dataTable thead > tr > td.sorting_asc_disabled:before,
 table.dataTable thead > tr > td.sorting_asc_disabled:after,
 table.dataTable thead > tr > td.sorting_desc_disabled:before,
 table.dataTable thead > tr > td.sorting_desc_disabled:after {
-  opacity: 1 !important;
+  opacity: 0.5 !important;
   left: 8px !important;
   right: unset !important;
   line-height: 10px !important;
   font-size: 0.7em !important;
+}
+table.dataTable thead > tr > th.sorting_asc::before, table.dataTable thead > tr > th.sorting_desc::after, table.dataTable thead > tr > td.sorting_asc::before, table.dataTable thead > tr > td.sorting_desc::after {
+  opacity: 1 !important;
 }
 
 tbody,
