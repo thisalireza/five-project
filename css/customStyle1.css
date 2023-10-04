@@ -630,3 +630,48 @@ table.dataTable thead > tr > td.sorting_desc_disabled {
 #myTable_paginate > span a:nth-child(5){
 display: none !important;
 } */
+
+
+
+.card-img-products{
+
+  height: 200px;
+  object-fit: cover ;
+    border-radius: 16px 16px 0 0;
+
+}
+
+.card-products{
+  cursor: pointer;
+  height: calc(100% - 15px);
+}
+
+.card-products:hover{
+  background-color: #f0f2ff;
+  transition: all ease 0.5s;
+}
+
+ /* .card-products >img:hover {
+
+
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+
+  transition: .5s ease;
+
+}   */
+
+
+.mysvg2{
+  mix-blend-mode: exclusion;
+  width: 20px;
+}
+
+.card-body{
+  height: calc(100% - 20px);
+
+}
+
+.card-inner{
+  height: calc(100% - 15%);
+}
