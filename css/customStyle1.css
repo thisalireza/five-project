@@ -124,17 +124,12 @@ span {
     width: 100% !important;
   }
 
-
-  table.dataTable.dtr-inline.collapsed tbody td:first-child::before, table.dataTable.dtr-inline.collapsed tbody th:first-child::before {
-
+  table.dataTable.dtr-inline.collapsed tbody td:first-child::before,
+  table.dataTable.dtr-inline.collapsed tbody th:first-child::before {
     left: -10px !important;
     z-index: 9999 !important;
     align-items: flex-end !important;
-
-
-}
-
-
+  }
 }
 
 /* style for products */
@@ -466,15 +461,14 @@ label.form-check-label {
     font-size: 13px !important;
     padding: 0.5em 0.5em !important;
     border-radius: 5px !important;
-}
-
+  }
 }
 
 @media (max-width: 525px) {
-  #myTable_previous{
+  #myTable_previous {
     display: none;
   }
-  #myTable_next{
+  #myTable_next {
     display: none;
   }
 }
@@ -597,7 +591,10 @@ table.dataTable thead > tr > td.sorting_desc_disabled:after {
   line-height: 10px !important;
   font-size: 0.7em !important;
 }
-table.dataTable thead > tr > th.sorting_asc::before, table.dataTable thead > tr > th.sorting_desc::after, table.dataTable thead > tr > td.sorting_asc::before, table.dataTable thead > tr > td.sorting_desc::after {
+table.dataTable thead > tr > th.sorting_asc::before,
+table.dataTable thead > tr > th.sorting_desc::after,
+table.dataTable thead > tr > td.sorting_asc::before,
+table.dataTable thead > tr > td.sorting_desc::after {
   opacity: 1 !important;
 }
 
@@ -607,7 +604,7 @@ tfoot,
 th,
 thead,
 tr {
-  border:1px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
 }
 
 table.dataTable thead > tr > th.sorting,
@@ -631,27 +628,95 @@ table.dataTable thead > tr > td.sorting_desc_disabled {
 display: none !important;
 } */
 
-
-
-.card-img-products{
-
-  height: 200px;
-  object-fit: cover ;
-    border-radius: 16px 16px 0 0;
-
-}
-
-.card-products{
+.card-products {
   cursor: pointer;
   height: calc(100% - 15px);
 }
 
-.card-products:hover{
+.card-products:hover {
   background-color: #f0f2ff;
   transition: all ease 0.5s;
 }
+.card-products:hover .overlay{
+  opacity: 0.5 !important;
+}
+.card-products:hover .vline::before{
+  width: 100% !important;
+}
+.card-products:hover .vline::after{
+  height: 100% !important;
+}
+.card-products .image-container {
+  position: relative;
+}
+.card-products .image-container img {
+  width: 100%;
+  /*object-fit: cover; */
+ 
+  border-radius: 16px 16px 0 0;
 
- /* .card-products >img:hover {
+}
+.card-products .image-container .overlay {
+  position: absolute;
+  background: #515e6f;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  direction: ltr;
+  border-radius: 16px 16px 0 0;
+}
+.card-products .image-container .overlay .vline {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9;
+  width: -webkit-calc(50% - 20px);
+  width: -moz-calc(50% - 20px);
+  width: calc(50% - 20px);
+  height: -webkit-calc(50% - 20px);
+  height: -moz-calc(50% - 20px);
+  height: calc(50% - 20px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card-products .image-container .overlay .vline.vline-bottom {
+  top: auto;
+  left: auto;
+  bottom: 20px;
+  right: 20px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.card-products .image-container .overlay .vline::before {
+  height: 1px;
+  width: 0%;
+}
+.card-products .image-container .overlay .vline::after {
+  width: 1px;
+  height: 0%;
+}
+.vline::after, .vline::before {
+  content: '';
+  background: #fff;
+  display: block;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* .card-products >img:hover {
 
 
   background: rgb(0, 0, 0);
@@ -661,17 +726,15 @@ display: none !important;
 
 }   */
 
-
-.mysvg2{
+.mysvg2 {
   mix-blend-mode: exclusion;
   width: 20px;
 }
 
-.card-body{
+.card-body {
   height: calc(100% - 20px);
-
 }
 
-.card-inner{
+.card-inner {
   height: calc(100% - 15%);
 }
