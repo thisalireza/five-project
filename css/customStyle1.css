@@ -4,7 +4,6 @@ a {
 }
 
 body a,
-a:hover,
 body a:active,
 body a:focus,
 body a:visited {
@@ -52,6 +51,21 @@ p {
   left: 0;
   font-weight: bold;
 }
+
+.DiscountCurve-product {
+  width: 69px;
+  height: 47px;
+  background: #ef394e;
+  border-radius: 0 16px 0 100%;
+  right: 0;
+  font-weight: bold;
+  padding: 0px 14px;
+}
+
+.DiscountCurve-product > span {
+  padding: 0;
+}
+
 .currency {
   font-size: 10px !important;
 }
@@ -130,6 +144,11 @@ span {
     z-index: 9999 !important;
     align-items: flex-end !important;
   }
+
+ .card-title{
+  font-size: inherit !important;
+ }
+
 }
 
 /* style for products */
@@ -445,6 +464,13 @@ label.form-check-label {
   box-shadow: 0 0 0 0rem !important;
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1170px) {
+.detail-date{
+  display: block !important;
+}
+}
+
+
 @media only screen and (min-device-width: 425px) and (max-device-width: 768px) {
   .product-image-ordering {
     max-width: 75% !important;
@@ -454,6 +480,9 @@ label.form-check-label {
 @media (max-width: 425px) {
   .badge {
     width: 100%;
+  }
+  .card-inner {
+    height: initial !important;
   }
 
   .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -736,5 +765,68 @@ display: none !important;
 }
 
 .card-inner {
-  height: calc(100% - 15%);
+  height: calc(100% - 11%);
+}
+
+.use-text{
+  font-size: 50px;
+  color: #fd1616;
+  background: #ffffff;
+  display: inline-block;
+  border: 3px dashed #fd1616;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 150px;
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+.logos-index{
+  text-align: center;
+ 
+  position: inherit;
+}
+
+
+.parallax-index{
+  background-image: url(../img/1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+
+}
+
+
+.parallax-index ::before {
+
+position: absolute;
+content: '';
+background: rgb(1 12 41 / 8%);
+height: 100%;
+width: 100%;
+z-index: -1;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+
+.empty-scroll{
+  height: 30rem;
+}
+
+i.use-text:hover {
+  background-color: red;
+}
+
+
+.custom-body-index
+{
+  overflow-x: hidden ;
 }
