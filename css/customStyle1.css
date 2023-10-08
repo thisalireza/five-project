@@ -140,7 +140,7 @@ span {
 
   table.dataTable.dtr-inline.collapsed tbody td:first-child::before,
   table.dataTable.dtr-inline.collapsed tbody th:first-child::before {
-    left: -10px !important;
+    left: 0px !important;
     z-index: 9999 !important;
     align-items: flex-end !important;
   }
@@ -149,6 +149,9 @@ span {
   font-size: inherit !important;
  }
 
+ #myTable th:first-child{
+  width: 60% !important;
+ }
 }
 
 /* style for products */
@@ -481,9 +484,9 @@ label.form-check-label {
   .badge {
     width: 100%;
   }
-  .card-inner {
+  /* .card-inner {
     height: initial !important;
-  }
+  } */
 
   .dataTables_wrapper .dataTables_paginate .paginate_button {
     min-width: 1.2em !important;
@@ -764,15 +767,14 @@ display: none !important;
   height: calc(100% - 20px);
 }
 
-.card-inner {
+/* .card-inner {
   height: calc(100% - 11%);
-}
+} */
 
 .use-text{
   font-size: 50px;
   color: #fd1616;
   background: #ffffff;
-  display: inline-block;
   border: 3px dashed #fd1616;
   position: relative;
   width: 150px;
@@ -782,13 +784,20 @@ display: none !important;
   margin-bottom: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .logos-index{
   text-align: center;
- 
   position: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
