@@ -315,7 +315,8 @@ button.list-group-item:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 1rem;
+}
+.sidebar li .submenu > li{
   padding-right: 1rem;
 }
 .nav-item {
@@ -329,12 +330,14 @@ button.list-group-item:hover {
 }
 li.has-submenu {
   padding-right: 0px;
+  cursor: pointer;
 }
 .nav-link img {
   width: 15px;
 }
 .nav-link {
   color: #6c6c6c;
+  width: fit-content;
 }
 
 .fstdropdown > .fstselected::after {
