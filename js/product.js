@@ -67,43 +67,34 @@ function deleteFilter(target) {
   target.parentElement.remove();
 }
 
-// for sidebarlist with dropdowns
+//for sidebarlist with dropdowns
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".sidebar .nav-link").forEach(function (element) {
-    element.addEventListener("click", function (e) {
-      let nextEl = element.nextElementSibling;
-      let parentEl = element.parentElement;
-      let dropdownIcon = element.querySelector("img");
-
-      if (nextEl) {
-        if (nextEl.classList.contains("show")) {
-          dropdownIcon.style.transform = "rotate(0deg)";
-        } else {
-          dropdownIcon.style.transform = "rotate(-90deg)";
+  document
+    .querySelectorAll(".sidebar .has-submenu")
+    .forEach(function (element) {
+      element.addEventListener("click", function (e) {
+        let navLink = element.querySelector(".nav-link");
+        let nextEl = navLink.nextElementSibling;
+        let dropdownIcon = navLink.querySelector("img");
+        if (nextEl && e.target.nodeName != "A") {
+          e.stopPropagation();
+          e.preventDefault();
+          if (nextEl.classList.contains("show")) {
+            dropdownIcon.style.transform = "rotate(0deg)";
+          } else {
+            dropdownIcon.style.transform = "rotate(-90deg)";
+          }
+          let mycollapse = new bootstrap.Collapse(nextEl, false);
+          if (nextEl.classList.contains("show")) {
+            mycollapse.hide();
+          } else {
+            mycollapse.show();
+          }
         }
-
-        e.preventDefault();
-        let mycollapse = new bootstrap.Collapse(nextEl);
-
-        if (nextEl.classList.contains("show")) {
-          mycollapse.hide();
-        } else {
-          mycollapse.show();
-          // find other submenus with class=show
-          var opened_submenu =
-            parentEl.parentElement.querySelector(".submenu.show");
-          // if it exists, then close all of them
-          // if (opened_submenu) {
-          //   opened_submenu.previousElementSibling.querySelector(
-          //     "img"
-          //   ).style.transform = "rotate(0deg)";
-          //   new bootstrap.Collapse(opened_submenu);
-          // }
-        }
-      }
-    }); // addEventListener
-  }); // forEach
+      });
+    });
 });
+
 
 // function openNav(element) {
 
