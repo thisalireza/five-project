@@ -1,3 +1,12 @@
+// set addDeliveryElement height same as selectDeliveryFirstElement after content load
+document.addEventListener("DOMContentLoaded", function () {
+  let selectDeliveryFirstElement = document.querySelector(
+    ".select-delivery div:first-child"
+  );
+  let addDeliveryElement = document.querySelector(".add-delivery");
+  addDeliveryElement.style.height = `${selectDeliveryFirstElement.offsetHeight}px`;
+});
+
 new DataTable("#myTable", {
   responsive: true,
   language: {
@@ -99,6 +108,3 @@ $(function () {
       .toggleClass("glyphicon-chevron-down");
   });
 });
-
-
-
