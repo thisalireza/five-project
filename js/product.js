@@ -6,7 +6,9 @@ if (sidebarlistItmes.length - 1 > showMoreBtnAtCount) {
     if (index > showMoreBtnAtCount - 1) itm.style.display = "none";
   });
 }
-
+if(sidebarlistItmes.length <= showMoreBtnAtCount + 1){
+  document.querySelector(".more-data").style.display = "none";
+}
 function myFunctionShowing(target) {
   if (!showMore) {
     showMore = true;
