@@ -11,13 +11,11 @@ ul.mtree ul {
 }
 ul.mtree li {
   list-style: none;
-  cursor: initial;
 }
 ul.mtree span {
   display: block;
   margin-top: 5px;
   padding-right: 5px;
-  cursor: initial !important;
 }
 ul.mtree li.mtree-node > span {
   font-weight: bold;

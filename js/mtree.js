@@ -21,7 +21,7 @@
     // Get node elements, and add classes for styling
     var node = $(".mtree li:has(ul)");
     node.each(function (index, val) {
-      $(this).children(":first-child").css("cursor", "pointer");
+      // $(this).children(":first-child").css("cursor", "pointer");
       $(this).addClass("mtree-node mtree-" + (collapsed ? "closed" : "open"));
       $(this)
         .children("ul")
@@ -33,6 +33,7 @@
 
     // Set mtree-active class on list items for last opened element
     $(".mtree li > *:first-child").on("click.mtree-active", function (e) {
+      $(".close-all-accordions").show();
       if ($(this).parent().hasClass("mtree-closed")) {
         $(".mtree-active").not($(this).parent()).removeClass("mtree-active");
         $(this).parent().addClass("mtree-active");
@@ -163,4 +164,23 @@
       }
     }
   }
+
+  function closeAllAccordions() {
+    $(".mtree-open").each(function () {
+      var close_items = $(this)
+        .closest("ul")
+        .children(".mtree-open")
+        .not($(this).parent())
+        .children("ul");
+      close_items.delay(100).slideToggle(duration, function () {
+        setNodeClass($(this).parent(), true);
+      });
+    });
+  }
+  $(".close-all-accordions").on("click", function () {
+    closeAllAccordions();
+    $(".close-all-accordions").hide();
+  });
+  $(".close-all-accordions").css("cursor", "pointer");
+  $(".close-all-accordions").hide();
 })(jQuery, this, this.document);
