@@ -1,35 +1,35 @@
-let showMoreBtnAtCount = 3;
-let sidebarlistItmes = document.querySelectorAll(".nav-item");
-let showMore = false;
-if (sidebarlistItmes.length - 1 > showMoreBtnAtCount) {
-  sidebarlistItmes.forEach((itm, index) => {
-    if (index > showMoreBtnAtCount - 1) itm.style.display = "none";
-  });
-}
-if(sidebarlistItmes.length <= showMoreBtnAtCount + 1){
-  document.querySelector(".more-data").style.display = "none";
-}
-function myFunctionShowing(target) {
-  if (!showMore) {
-    showMore = true;
-    target.innerText = "- نمایش کمتر";
-    sidebarlistItmes.forEach((itm, index) => {
-      if (index > showMoreBtnAtCount - 1) {
-        itm.style.visibility = "visible";
-        itm.style.display = "block";
-      }
-    });
-  } else {
-    showMore = false;
-    target.innerText = "+ نمایش بیشتر";
-    sidebarlistItmes.forEach((itm, index) => {
-      if (index > showMoreBtnAtCount - 1) {
-        // itm.style.visibility = "hidden" ;
-        itm.style.display = "none";
-      }
-    });
-  }
-}
+// let showMoreBtnAtCount = 3;
+// let sidebarlistItmes = document.querySelectorAll(".nav-item");
+// let showMore = false;
+// if (sidebarlistItmes.length - 1 > showMoreBtnAtCount) {
+//   sidebarlistItmes.forEach((itm, index) => {
+//     if (index > showMoreBtnAtCount - 1) itm.style.display = "none";
+//   });
+// }
+// if (sidebarlistItmes.length <= showMoreBtnAtCount + 1) {
+//   document.querySelector(".more-data").style.display = "none";
+// }
+// function myFunctionShowing(target) {
+//   if (!showMore) {
+//     showMore = true;
+//     target.innerText = "- نمایش کمتر";
+//     sidebarlistItmes.forEach((itm, index) => {
+//       if (index > showMoreBtnAtCount - 1) {
+//         itm.style.visibility = "visible";
+//         itm.style.display = "block";
+//       }
+//     });
+//   } else {
+//     showMore = false;
+//     target.innerText = "+ نمایش بیشتر";
+//     sidebarlistItmes.forEach((itm, index) => {
+//       if (index > showMoreBtnAtCount - 1) {
+//         // itm.style.visibility = "hidden" ;
+//         itm.style.display = "none";
+//       }
+//     });
+//   }
+// }
 // function myFunction() {
 //   var x = document.getElementById("myLinks");
 //   if (x.style.display === "block") {
@@ -56,48 +56,97 @@ let matn = document.querySelector(".text-sidebar3");
 matn.innerText = matn.innerText.substring(0, 20) + "...";
 
 // for list
-$(function () {
-  $(".list-group-item").on("click", function () {
-    $(".glyphicon", this)
-      .toggleClass("glyphicon-chevron-right")
-      .toggleClass("glyphicon-chevron-down");
-  });
-});
+// $(function () {
+//   $(".list-group-item").on("click", function () {
+//     $(".glyphicon", this)
+//       .toggleClass("glyphicon-chevron-right")
+//       .toggleClass("glyphicon-chevron-down");
+//   });
+// });
 
 //for deleting filters
-function deleteFilter(target) {
-  target.parentElement.remove();
-}
+// function deleteFilter(target) {
+//   target.parentElement.remove();
+// }
+// //for sidebarlist with dropdowns
+// document.addEventListener("DOMContentLoaded", function () {
+//   document
+//     .querySelectorAll(".sidebar .has-submenu")
+//     .forEach(function (element) {
+//       element.addEventListener("click", function (e) {
+//         let navLink = element.querySelector(".nav-link");
+//         let nextEl = navLink.nextElementSibling;
+//         let dropdownIcon = navLink.querySelector("img");
+//         let parentEl = element.parentElement;
 
-//for sidebarlist with dropdowns
+//         if (nextEl && e.target.nodeName != "A") {
+//           // e.stopPropagation();
+//           e.preventDefault();
+//           if (nextEl.classList.contains("show")) {
+//             dropdownIcon.style.transform = "rotate(0deg)";
+//           } else {
+//             dropdownIcon.style.transform = "rotate(-90deg)";
+//           }
+
+//           let mycollapse = new bootstrap.Collapse(nextEl, false);
+//           if (nextEl.classList.contains("show")) {
+//             mycollapse.hide();
+//           } else {
+//             mycollapse.show();
+
+//             var opened_submenu =
+//               parentEl.parentElement.querySelector(".submenu.show");
+//             if (opened_submenu) {
+//               opened_submenu.previousElementSibling.querySelector(
+//                 "img"
+//               ).style.transform = "rotate(0deg)";
+//               new bootstrap.Collapse(opened_submenu);
+//             }
+//           }
+//         }
+//       });
+//     });
+// });
+
+/*
+// for sidebarlist with dropdowns
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .querySelectorAll(".sidebar .has-submenu")
-    .forEach(function (element) {
-      element.addEventListener("click", function (e) {
-        let navLink = element.querySelector(".nav-link");
-        let nextEl = navLink.nextElementSibling;
-        let dropdownIcon = navLink.querySelector("img");
-        if (nextEl && e.target.nodeName != "A") {
-          e.stopPropagation();
-          e.preventDefault();
-          if (nextEl.classList.contains("show")) {
-            dropdownIcon.style.transform = "rotate(0deg)";
-          } else {
-            dropdownIcon.style.transform = "rotate(-90deg)";
-          }
-          let mycollapse = new bootstrap.Collapse(nextEl, false);
-          if (nextEl.classList.contains("show")) {
-            mycollapse.hide();
-          } else {
-            mycollapse.show();
+  document.querySelectorAll(".sidebar .nav-link").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      let nextEl = element.nextElementSibling;
+      let parentEl = element.parentElement;
+      let dropdownIcon = element.querySelector("img");
+
+      if (nextEl) {
+        if (nextEl.classList.contains("show")) {
+          dropdownIcon.style.transform = "rotate(0deg)";
+        } else {
+          dropdownIcon.style.transform = "rotate(-90deg)";
+        }
+
+        e.preventDefault();
+        let mycollapse = new bootstrap.Collapse(nextEl);
+
+        if (nextEl.classList.contains("show")) {
+          mycollapse.hide();
+        } else {
+          mycollapse.show();
+          // find other submenus with class=show
+          var opened_submenu =
+            parentEl.parentElement.querySelector(".submenu.show");
+          // if it exists, then close all of them
+          if (opened_submenu) {
+            opened_submenu.previousElementSibling.querySelector(
+              "img"
+            ).style.transform = "rotate(0deg)";
+            new bootstrap.Collapse(opened_submenu);
           }
         }
-      });
-    });
+      }
+    }); // addEventListener
+  }); // forEach
 });
-
-
+*/
 // function openNav(element) {
 
 //   element.style.transform = " rotate(-90deg)";
@@ -110,3 +159,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //   console.log("Close sidebar!");
 // }
+
+
